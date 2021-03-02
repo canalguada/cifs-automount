@@ -1,0 +1,12 @@
+[Unit]
+Description=Create automount units for available local CIFS shares
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/default/cifs-automount
+ExecStart=/usr/local/bin/cifs-automount
+
+[Install]
+WantedBy=multi-user.target

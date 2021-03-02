@@ -1,0 +1,15 @@
+# Environment File for cifs-automount
+
+CIFS_AUTOMOUNT_ROOT=/cifs
+
+# Common mount options
+CIFS_AUTOMOUNT_OPTIONS="guest,noperm,iocharset=utf8,rw"
+
+# nmap and nbtscan could use this netmask to browse the local network in future
+# version.
+# CIFS_AUTOMOUNT_NETMASK="192.168.1.0/24"
+
+# Known ip addresses using yet the old and insecure SMBv1 protocol
+# For instance: CIFS_AUTOMOUNT_INSECURE="192.168.1.1 192.168.1.2"
+CIFS_AUTOMOUNT_INSECURE="192.168.1.254"
+
